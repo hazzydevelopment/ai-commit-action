@@ -1,0 +1,23 @@
+name: "AI Commit Message Generator"
+description: "Generate clean commit messages using AI (Supports Turkish & English)"
+author: "your-name-or-org"
+branding:
+  icon: "message-square"
+  color: "blue"
+
+inputs:
+  api_key:
+    description: "OpenAI or compatible API key"
+    required: true
+  model:
+    description: "Model to use (default: gpt-4o-mini)"
+    required: false
+    default: "gpt-4o-mini"
+  language:
+    description: "Commit language: en or tr"
+    required: false
+    default: "en"
+
+runs:
+  using: "node20"
+  main: "index.js"
